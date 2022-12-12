@@ -1,0 +1,74 @@
+.about_me{
+	margin-top: 120px;
+	display:grid;
+	grid-template-columns: 400px 1fr;
+	img{
+		width: 400px;
+		height: 600px;
+	}
+	.info{
+		height:600px;
+		display:grid;
+		margin-top: 7px;
+		margin-left: 68px;
+		grid-template-rows: 1fr 2fr;
+		padding-right: 100px;
+		&__text{
+			.divider{
+				margin-left: 0;
+			}
+			padding-top: 6px;
+			h2{
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 36px;
+				line-height: 60px;
+			}
+			
+			.text_block{
+				padding-top: 20px;
+				width: 570px;
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 21px;
+				color: #000000;
+			}
+			
+		}
+		
+		&__block{
+			position: relative;
+			margin-top: 40px;
+			display:grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 150px;
+			grid-auto-rows: 150px;
+			.block{
+				display:grid;
+				grid-template-columns: 0.2fr 1fr;
+				.icon{
+					position: relative;
+					grid-row:1/10;
+					@include before_circle;
+					&:before{
+						top: -6px;
+						left: -6px;
+					}	
+				}
+				h3{
+					font-size: 14px;
+				}
+
+				&__text{
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 18px;
+					color: #000000;
+				}
+			}
+		}		
+	}
+}

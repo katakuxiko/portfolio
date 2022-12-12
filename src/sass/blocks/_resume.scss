@@ -1,0 +1,93 @@
+.resume{
+	padding-top: 120px;
+	&_title{
+		position: relative;
+		text-align: center;
+		@include before_circle;
+		&:before{
+			top: -6px;
+			left: 50%;
+			transform: translateX(-50%)
+		}
+	}
+	&_subtitle{
+		text-align: center;
+	}
+	&_wrapper{
+		padding:  60px 65px 0 65px;
+		display:grid;
+		grid-template-columns: repeat(2,425px);
+		column-gap: 135px;
+	}
+	&_column{
+		&-title{
+			position: relative;
+			padding-left: 35px;
+			&::before{
+				content: " ";
+				position: absolute;
+				width: 15px;
+				border-radius:100%;
+				top:50%;
+				transform: translateY(-50%);
+				left:0;
+				height: 15px;
+				background-color:$main-color
+			}
+		}
+		ul{
+			list-style-type: none;
+			li{
+				position: relative;
+				&:after{
+					content: " ";
+					width:2px;
+					height:calc(100% + 16px);
+					position: absolute;
+					top:-16px;
+					left:7px;
+					background-color:#000000;
+				}
+			}
+		}
+	}
+	&_item{
+		position: relative;
+		&::before{
+			content: "";
+			height:1px;
+			width: 39px;
+			left:7px;
+			top:68px;
+			position: absolute;
+			background-color:#000000;
+		}
+		&-head{
+			position: relative;
+			padding: 45px 0 0 100px;
+			h4{
+				margin-bottom: 0;
+			}
+		}
+		&-body{
+			padding: 12px 0 0 45px;
+		}
+		&-icon{
+			position: absolute;
+			top:50px;
+			left:45px;
+			@include before_circle;
+			img{
+				position: absolute;
+				left:17px;
+				top:14px;
+			}
+		}
+		&-location{
+			margin-top: 5px;
+			font-size: 12px;
+			line-height:14px;
+		}
+	}
+
+}
